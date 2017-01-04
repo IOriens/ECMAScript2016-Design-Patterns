@@ -30,8 +30,10 @@ node build.js
 >Specify the kinds of objects to create using a prototypical instance, and create new objects by copying this prototype.
 
 ##结构型模式：
+
 - [Adapter](https://github.com/ryouaki/ECMAScript2016-Design-Patterns/blob/master/Adapter.js)（适配器模式）：将一个类的接口转换成客户希望的另外一个接口。Adapter模式使得原本由于接口不兼容而不能一起工作的那些类可以一起工作。
 >Convert the interface of a class into another interface clients expect. Adapter lets classes work together that couldn't otherwise because of incompatible interfaces.
+
 - [Bridge](https://github.com/ryouaki/ECMAScript2016-Design-Patterns/blob/master/Bridge.js)（桥接模式）：将抽象部分与它的实现部分分离，使它们都可以独立地变化。
 >Decouple an abstraction from its implementation so that the two can vary independently.
 
