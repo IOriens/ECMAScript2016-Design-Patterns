@@ -1,14 +1,12 @@
 const fs = require('fs')
+const path = require('path')
 
-fs.readdir('.', (err, files) => {
+fs.readdir(path.join(__dirname, 'src'), (err, files) => {
   if (err) {
     console.log(err)
   }
-  const processFile = __filename
-  const filteredFiles = files.filter((item) => {
-    const stat = fs.statSync(item)
-    return `${__dirname}/${item}` !== processFile && item !== `output.md` && !stat.isDirectory()
-  })
+
+  const filteredFiles = files.sort()
 
   fs.open('output.md', 'w', (err, fd) => {
     if (err) {
@@ -19,7 +17,7 @@ fs.readdir('.', (err, files) => {
 
     for (let file of filteredFiles) {
       console.log(file)
-      data = fs.readFileSync(file)
+      data = fs.readFileSync(path.join(__dirname, 'src', file))
 
       if (file.match(/.js$/)) {
         const preFix = new Buffer(`\n# ${file}` + '\n```\n')
