@@ -54,8 +54,10 @@ node build.js
 ##行为型模式：
 - [Chain of Responsibility](https://github.com/ryouaki/ECMAScript2016-Design-Patterns/blob/master/Chain%20of%20Responsibility.js)（责任链模式）：为解除请求的发送者和接收者之间耦合，而使多个对象都有机会处理这个请求。将这些对象连成一条链，并沿着这条链传递该请求，直到有一个对象处理它。
 >Avoid coupling the sender of a request to its receiver by giving more than one object a chance to handle the request. Chain the receiving objects and pass the request along the chain until an object handles it.
+
 - [Command](https://github.com/ryouaki/ECMAScript2016-Design-Patterns/blob/master/Command.js)（命令模式）：将一个请求封装为一个对象，从而使你可用不同的请求对客户进行参数化；对请求排队或记录请求日志，以及支持可取消的操作。
 >Encapsulate a request as an object, thereby letting you parameterize clients with different requests, queue or log requests, and support undoable operations.
+
 - [Interpreter](https://github.com/ryouaki/ECMAScript2016-Design-Patterns/blob/master/Interpreter.js)（解析器模式）：给定一个语言, 定义它的文法的一种表示，并定义一个解释器, 该解释器使用该表示来解释语言中的句子。
 >Given a language, define a represention for its grammar along with an interpreter that uses the representation to interpret sentences in the language.
 
