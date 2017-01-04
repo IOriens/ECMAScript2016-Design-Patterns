@@ -1,36 +1,36 @@
-'use strict';
+'use strict'
 
 class Subject {
-    constructor() {
-        console.log('Subject Class created');
-    }
+  constructor () {
+    console.log('Subject Class created')
+  }
 
-    request() {
-        console.log('Subject.request invoked');
-    }
+  request () {
+    console.log('Subject.request invoked')
+  }
 }
 
 class RealSubject extends Subject {
-    constructor() {
-        super()
-        console.log('RealSubject Class created');
-    }
+  constructor () {
+    super()
+    console.log('RealSubject Class created')
+  }
 
-    request() {
-        console.log('RealSubject.request invoked');
-    }
+  request () {
+    console.log('RealSubject.request invoked')
+  }
 }
 
 class Proxy extends Subject {
-    constructor() {
-        super()
-        console.log('Proxy Class created');
-    }
+  constructor () {
+    super()
+    console.log('Proxy Class created')
+  }
 
-    request() {
-        this.realSubject = new RealSubject();
-        this.realSubject.request();
-    }
+  request () {
+    this.realSubject = new RealSubject()
+    this.realSubject.request()
+  }
 }
 
 var proxy = new Proxy()

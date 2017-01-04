@@ -1,100 +1,104 @@
-'use strict';
+// Project done by http://www.kuip.co.uk/
+// License: Attribution-ShareAlike (http://creativecommons.org/licenses/by-sa/4.0/)
+'use strict'
 
 class Visitor {
-    constructor() {
-        console.log('Visitor Class created!');
-    }
+  constructor () {
+    console.log('Visitor Class created!')
+  }
 
-    visitConcreteElementA(ConcreteElementA) {
-        console.log('Visitor.visitConcreteElementA invoked');
-    }
+  VisitConcreteElementA (ConcreteElementA) {
+    console.log('Visitor.visitConcreteElementA invoked')
+  }
 
-    visitConcreteElementB(ConcreteElementB) {
-        console.log('Visitor.visitConcreteElementB invoked');
-    }
+  VisitConcreteElementB (ConcreteElementB) {
+    console.log('Visitor.visitConcreteElementB invoked')
+  }
 }
 
 class ConcreteVisitor1 extends Visitor {
-    constructor() {
-        super();
-        console.log('ConcreteVisitor1 Class created!');
-    }
+  constructor () {
+    super()
+    console.log('ConcreteVisitor1 created')
+  }
 
-    visitConcreteElementA(ConcreteElementA) {
-        console.log('ConcreteVisitor1.visitConcreteElementA invoked');
-    }
+  VisitConcreteElementA (ConcreteElementA) {
+    console.log('ConcreteVisitor1 visited ConcreteElementA')
+  }
 
-    visitConcreteElementB(ConcreteElementB) {
-        console.log('ConcreteVisitor1.visitConcreteElementB invoked');
-    }
+  VisitConcreteElementB (ConcreteElementB) {
+    console.log('ConcreteVisitor1 visited ConcreteElementB')
+  }
 }
 
 class ConcreteVisitor2 extends Visitor {
-    constructor() {
-        super();
-        console.log('ConcreteVisitor2 Class created!');
-    }
+  constructor () {
+    super()
+    console.log('ConcreteVisitor2 created')
+  }
 
-    visitConcreteElementA(ConcreteElementA) {
-        console.log('ConcreteVisitor2.visitConcreteElementA invoked');
-    }
+  VisitConcreteElementA (ConcreteElementA) {
+    console.log('ConcreteVisitor2 visited ConcreteElementA')
+  }
 
-    visitConcreteElementB(ConcreteElementB) {
-        console.log('ConcreteVisitor2.visitConcreteElementB invoked');
-    }
+  VisitConcreteElementB (ConcreteElementB) {
+    console.log('ConcreteVisitor2 visited ConcreteElementB')
+  }
 }
 
 class ObjectStructure {
-    constructor() {
-        console.log('ObjectStructure Class created!');
-    }
+  constructor () {
+    console.log('ObjectStructure created')
+  }
 }
 
 class Element {
-    constructor() {
-        console.log('Element Class created!');
-    }
+  constructor () {
+    console.log('Element Class created!')
+  }
 
-    Accept(visitor) {
-        console.log('Element.visitConcreteElementB invoked');
-    }
+  Accept (visitor) {
+    console.log('Element.visitConcreteElementB invoked')
+  }
 }
 
 class ConcreteElementA extends Element {
-    constructor() {
-        super();
-        console.log('ConcreteElementA Class created!');
-    }
+  constructor () {
+    super()
+    console.log('ConcreteElementA created')
+  }
 
-    accept(visitor) {
-        console.log('ConcreteElementA.accept invoked');
-        visitor.visitConcreteElementA(this);
-    }
+  Accept (visitor) {
+    visitor.VisitConcreteElementA(this)
+  }
 
-    operationA() {
-        console.log('ConcreteElementA.operationA invoked');
-    }
+  OperationA () {
+    console.log('ConcreteElementA OperationA')
+  }
 }
 
 class ConcreteElementB extends Element {
-    constructor() {
-        super();
-        console.log('ConcreteElementB Class created!');
-    }
+  constructor () {
+    super()
+    console.log('ConcreteElementB created')
+  }
 
-    accept(visitor) {
-        console.log('ConcreteElementB.accept invoked');
-        visitor.visitConcreteElementB(this);
-    }
+  Accept (visitor) {
+    visitor.VisitConcreteElementB(this)
+  }
 
-    operationB() {
-        console.log('ConcreteElementB.operationB invoked');
-    }
+  OperationB () {
+    console.log('ConcreteElementB OperationB')
+  }
 }
 
-let visitor1 = new ConcreteVisitor1();
-let visitor2 = new ConcreteVisitor2();
-let elementA = new ConcreteElementA();
-let elementB = new ConcreteElementB();
-elementA.accept(visitor1);
-elementB.accept(visitor2);
+function initVisitor () {
+  let visitor1 = new ConcreteVisitor1()
+  let visitor2 = new ConcreteVisitor2()
+  let elementA = new ConcreteElementA()
+  let elementB = new ConcreteElementB()
+  elementA.Accept(visitor1)
+  elementB.Accept(visitor2)
+}
+
+initVisitor()
