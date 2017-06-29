@@ -1,19 +1,19 @@
-# ECMAScript-Design-Patterns
+## ECMAScript-Design-Patterns
 使用es6实现的设计模式
 
-# Environment
+## Environment
 Nodejs v6.3.0+
 
-# Build output.md
+## Build output.md
 ```
 node build.js
 ```
-# 设计模式分为三种类型，共23种。
+## 设计模式分为三种类型，共23种。
 - 创建型模式：单例模式、抽象工厂模式、建造者模式、工厂模式、原型模式。
 - 结构型模式：适配器模式、桥接模式、装饰模式、组合模式、外观模式、享元模式、代理模式。
 - 行为型模式：模版方法模式、命令模式、迭代器模式、观察者模式、中介者模式、备忘录模式、解释器模式（Interpreter模式）、状态模式、策略模式、职责链模式(责任链模式)、访问者模式。
 
-##创建型模式：
+### 创建型模式：
 - [Signleton](https://github.com/ryouaki/ECMAScript-Design-Patterns/blob/master/Signleton.js)（单例模式）：保证一个类仅有一个实例，并提供一个访问它的全局访问点。
 >Ensure a class only has one instance, and provide a global point of access to it.
 
@@ -29,7 +29,7 @@ node build.js
 - [Prototype](https://github.com/ryouaki/ECMAScript2016-Design-Patterns/blob/master/Prototype.js)（原型模式）：用原型实例指定创建对象的种类，并且通过拷贝这个原型来创建新的对象。
 >Specify the kinds of objects to create using a prototypical instance, and create new objects by copying this prototype.
 
-##结构型模式：
+### 结构型模式：
 
 - [Adapter](https://github.com/ryouaki/ECMAScript2016-Design-Patterns/blob/master/Adapter.js)（适配器模式）：将一个类的接口转换成客户希望的另外一个接口。Adapter模式使得原本由于接口不兼容而不能一起工作的那些类可以一起工作。
 >Convert the interface of a class into another interface clients expect. Adapter lets classes work together that couldn't otherwise because of incompatible interfaces.
@@ -51,7 +51,7 @@ node build.js
 - [Proxy](https://github.com/ryouaki/ECMAScript2016-Design-Patterns/blob/master/Proxy.js)（代理模式）：为其他对象提供一个代理以控制对这个对象的访问。
 >Provide a surrogate or placeholder for another object to control access to it.
 
-##行为型模式：
+### 行为型模式：
 - [Chain of Responsibility](https://github.com/ryouaki/ECMAScript2016-Design-Patterns/blob/master/Chain%20of%20Responsibility.js)（责任链模式）：为解除请求的发送者和接收者之间耦合，而使多个对象都有机会处理这个请求。将这些对象连成一条链，并沿着这条链传递该请求，直到有一个对象处理它。
 >Avoid coupling the sender of a request to its receiver by giving more than one object a chance to handle the request. Chain the receiving objects and pass the request along the chain until an object handles it.
 
@@ -86,8 +86,8 @@ node build.js
 >Represent an operation to be performed on the elements of an object structure. Visitor lets you define a new operation without changing the classes of the elements on which it operates.
 
 
-# 参考
+## 参考
 [es6-design-patterns](https://github.com/loredanacirstea/es6-design-patterns)
 
-# LICENCE
+## LICENSE
 MIT
